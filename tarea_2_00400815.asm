@@ -1,7 +1,7 @@
 	org	100h	;004 00815
 
 section	.text 
-	mov	ax,		0
+	mov	ax,		0 ;-----------ejercicio 1
 	mov	bl,		5
 
 	add	ax,		0
@@ -22,7 +22,7 @@ lupi:	mov	bl,		[comnt+di]
 	inc	di
 	loop	lupi
 
-	mov	di,		210h
+	mov	di,		210h ;===============ejercicio 2
 	mov	cx,		11
 	mov	ax,		2h
 
@@ -36,7 +36,7 @@ words:  add     di, 		2h
 bytes:  add     di, 		1h
 d:	loop		lupi2
 
-	mov    	byte[220h], 	0 ; F0 = 0
+	mov    	byte[220h], 	0 ; F0 = 0 ;========== ejercicio 3
         mov     byte[221h], 	1  ; F1 = 1
         mov     di, 		222h
     	mov	cx,		13
