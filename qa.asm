@@ -24,15 +24,18 @@ lupi:	mov	bl,		[comnt+di]
 	loop	lupi
 
 	mov	di,		210h
-		mov		cx,		11
-		mov		ax,		2h
+	mov	cx,		11
+	mov	ax,		2h
 
 lupi2:	add 	ax,		ax
-		mov		[di],		ah
-		mov		[di+1],		al
-		inc		di
-		inc		di
-		loop	lupi2
+	mov     [di], 		ax
+        cmp     ah, 		00h
+        ja      words  ;ja>  ah!=00
+        je      bytes  ;je =
+words:  add     di, 		2h
+		jmp		d
+bytes:  add     di, 		1h
+d:	loop		lupi2
 
 	int 20h
 
