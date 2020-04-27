@@ -23,7 +23,7 @@ lupi:	mov	bl,		[comnt+di]
 	inc	di
 	loop	lupi
 
-	mov	di,		220h
+	mov	di,		210h
 		mov		cx,		11
 		mov		ax,		2h
 
