@@ -23,6 +23,18 @@ lupi:	mov	bl,		[comnt+di]
 	inc	di
 	loop	lupi
 
+	mov ax, [one]
+    	mul [two] ;
+
+	mov	di,		0d
+	mov	cx,		[len]
+
+lupi2:	mov	bl,		[comnt+di]
+	mov	[di+200h],	bl
+	inc	di
+	loop	lupi2
+
+	cmp di,		11
 
 	int 20h
 
