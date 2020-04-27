@@ -10,7 +10,6 @@ section	.text
 	add	ax,		1
 	add	ax,		5
 	div	bl
-	;mov [208h], 		al
 
 	cmp 	al,		 2
 	je	lupi
@@ -36,6 +35,22 @@ words:  add     di, 		2h
 		jmp		d
 bytes:  add     di, 		1h
 d:	loop		lupi2
+
+	mov    	byte[220h], 	0 ; F0 = 0
+        mov     byte[221h], 	1  ; F1 = 1
+        mov     di, 		222h
+    	mov	cx,		13
+		
+lupi3:	mov     ax, 		0
+        mov     [di], 		ax ;0
+    	sub     di, 		2h; 2
+        mov     al, 		[di] ;2
+        add     di, 		1h  ;1
+        add     ax, 		[di] ;1
+        add     di, 		1h  ;1 
+        mov     [di], 		ax ;1
+        add     di, 		1h  ;1
+	loop	lupi3
 
 	int 20h
 
