@@ -1,5 +1,5 @@
 	org	100h	;004 00815
-	
+
 section	.text 
 	mov	ax,		0
 	mov	bl,		5
@@ -10,6 +10,22 @@ section	.text
 	add	ax,		1
 	add	ax,		5
 	div	bl
-	mov [208h], 		al	
+	;mov [208h], 		al
+
+	cmp al, 2
+	je lupi
+
+	mov	di,		0d
+	mov	cx,		[len]
+
+lupi:	mov	bl,		[comnt+di]
+	mov	[di+200h],	bl
+	inc	di
+	loop	lupi
+
 
 	int 20h
+
+section	.data
+	comnt	db	"2 = Aun se pasa"
+	len	equ	$-comnt
