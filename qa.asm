@@ -12,8 +12,8 @@ section	.text
 	div	bl
 	;mov [208h], 		al
 
-	cmp al, 2
-	je lupi
+	cmp 	al,		 2
+	je	lupi
 
 	mov	di,		0d
 	mov	cx,		[len]
@@ -23,18 +23,16 @@ lupi:	mov	bl,		[comnt+di]
 	inc	di
 	loop	lupi
 
-	mov ax, [one]
-    	mul [two] ;
+	mov	di,		220h
+		mov		cx,		11
+		mov		ax,		2h
 
-	mov	di,		0d
-	mov	cx,		[len]
-
-lupi2:	mov	bl,		[comnt+di]
-	mov	[di+200h],	bl
-	inc	di
-	loop	lupi2
-
-	cmp di,		11
+lupi2:	add 	ax,		ax
+		mov		[di],		ah
+		mov		[di+1],		al
+		inc		di
+		inc		di
+		loop	lupi2
 
 	int 20h
 
