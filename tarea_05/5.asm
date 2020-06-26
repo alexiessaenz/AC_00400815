@@ -7,55 +7,99 @@ section .text
 	xor 	si, si
 	xor 	di, di
 
-	mov 	si, 25d ; X -> Columna
-	mov 	di, 25d ; Y -> Fila
-    mov     bx, si
-    add     bx, 50d ; largo
-	call 	linea_diagN
-	
+	mov	    si, 0d ; X -> Columna
+	mov 	di, 0d ; Y -> Fila
+    mov     bx, di
+    add     bx, 100d; largo
+	call 	linea_v
 
-	mov 	si, 25d ; X -> Columna
-	mov 	di, 75d ; Y -> Fila
-    mov     bx, si
-    add     bx, 50d ;largo
-	call 	linea_diagP
-
-	mov	    si, 25d ; X -> Columna
-	mov 	di, 25d ; Y -> Fila
+    mov	    si, 10d ; X -> Columna
+	mov 	di, 10d ; Y -> Fila
+    mov     bx, di
+    add     bx, 100d; largo
+	call 	linea_v
+    
+    mov	    si, 130d ; X -> Columna
+	mov 	di, 10d ; Y -> Fila
+    mov     bx, di
+    add     bx, 100d; largo
+	call 	linea_v
+    
+    mov	    si, 30d ; X -> Columna
+	mov 	di, 40d ; Y -> Fila
+    mov     bx, di
+    add     bx, 70d; largo
+	call 	linea_v
+    
+    mov	    si, 110d ; X -> Columna
+	mov 	di, 40d ; Y -> Fila
+    mov     bx, di
+    add     bx, 70d; largo
+	call 	linea_v
+    
+    mov	    si, 100d ; X -> Columna
+	mov 	di, 50d ; Y -> Fila
     mov     bx, di
     add     bx, 50d; largo
 	call 	linea_v
-
-	mov	    si, 75d ; X -> Columna
-	mov 	di, 25d ; Y -> Fila
+    
+	mov	    si, 0d ; X -> Columna
+	mov 	di, 0d ; Y -> Fila
     mov     bx, di
-    add     bx, 50d ;largo
-	call 	linea_v
+    add     bx, 20d; largo
+	call 	linea_h
 
-    mov 	si, 75d ; X -> Columna
-	mov 	di, 25d ; Y -> Fila
+    mov	    si, 10d ; X -> Columna
+	mov 	di, 10d ; Y -> Fila
+    mov     bx, di
+    add     bx, 20d; largo
+	call 	linea_h
+	
+    mov	    si, 10d ; X -> Columna
+	mov 	di, 110d ; Y -> Fila
+    mov     bx, Si
+    add     bx, 20d; largo
+	call 	linea_h
+	
+    mov	    si, 110d ; X -> Columna
+	mov 	di, 110d ; Y -> Fila
+    mov     bx, Si
+    add     bx, 20d; largo
+	call 	linea_h
+	
+    
+    mov 	si, 0d ; X -> Columna
+	mov 	di, 0d ; Y -> Fila
+    mov     bx, si
+    add     bx, 10d ; largo
+	call 	linea_diagN
+	
+    mov 	si, 20d ; X -> Columna
+	mov 	di, 0d ; Y -> Fila
     mov     bx, si
     add     bx, 50d ; largo
 	call 	linea_diagN
-	
 
-	mov 	si, 75d ; X -> Columna
-	mov 	di, 75d ; Y -> Fila
+    
+
+	mov 	si, 60d ; X -> Columna      VERTICAL POSITIVAS
+	mov 	di, 40d ; Y -> Fila
     mov     bx, si
-    add     bx, 50d ;largo
+    add     bx, 40d ;largo
+	call 	linea_diagP
+	
+    mov 	si, 70d ; X -> Columna
+	mov 	di, 50d ; Y -> Fila
+    mov     bx, si
+    add     bx, 40d ;largo
+	call 	linea_diagP
+	
+    mov 	si, 70d ; X -> Columna
+	mov 	di, 80d ; Y -> Fila
+    mov     bx, si
+    add     bx, 40d ;largo
 	call 	linea_diagP
 
-	mov	    si, 75d ; X -> Columna
-	mov 	di, 25d ; Y -> Fila
-    mov     bx, di
-    add     bx, 50d; largo
-	call 	linea_v
-
-	mov	    si, 125d ; X -> Columna
-	mov 	di, 25d ; Y -> Fila
-    mov     bx, di
-    add     bx, 50d ;largo
-	call 	linea_v
 
 
 	call 	kb		; Utilizamos espera de alguna tecla
