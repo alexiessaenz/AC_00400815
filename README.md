@@ -1,1 +1,1 @@
-# Arquitectura de Computadoras
+# Tareas de Laboratorio: Arquitectura de Computadoras
